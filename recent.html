@@ -9,9 +9,11 @@
     header { background-color: #ff99cc; color: white; text-align: center; padding: 20px; }
     nav { background-color: #ff66b2; display: flex; justify-content: flex-end; padding: 10px; }
     nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
-    .posts { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; padding: 20px; }
-    .card { background: white; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); padding: 15px; text-align: center; }
-    .card img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; }
+    .posts { display: flex; flex-direction: column; gap: 20px; padding: 20px; }
+    .card { background: white; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); padding: 15px; }
+    .pair { display: flex; justify-content: space-around; align-items: center; }
+    .person { text-align: center; width: 45%; }
+    .person img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; }
     footer { background-color: #ff99cc; color: white; text-align: center; padding: 15px; margin-top: 20px; }
   </style>
 </head>
@@ -27,24 +29,57 @@
   </nav>
 
   <section class="posts">
+    <!-- Card 1 -->
     <div class="card">
-      <img src="person1.jpg" alt="Person 1">
-      <h3>Alex</h3>
-      <p>The mysterious new student with a charming smile.</p>
+      <div class="pair">
+        <div class="person">
+          <img src="person1.jpg" alt="Person 1">
+          <h3>Alex</h3>
+          <p>The mysterious new student with a charming smile.</p>
+        </div>
+        <div class="person">
+          <img src="person2.jpg" alt="Person 2">
+          <h3>Jamie</h3>
+          <p>Known for their witty jokes and bright personality.</p>
+        </div>
+      </div>
     </div>
+
+    <!-- Card 2 -->
     <div class="card">
-      <img src="person2.jpg" alt="Person 2">
-      <h3>Jamie</h3>
-      <p>Known for their witty jokes and bright personality.</p>
+      <div class="pair">
+        <div class="person">
+          <img src="person3.jpg" alt="Person 3">
+          <h3>Taylor</h3>
+          <p>Loves music and always carries a guitar.</p>
+        </div>
+        <div class="person">
+          <img src="person4.jpg" alt="Person 4">
+          <h3>Sam</h3>
+          <p>Sports enthusiast with endless energy.</p>
+        </div>
+      </div>
     </div>
+
+    <!-- Card 3 -->
     <div class="card">
-      <h3>Rumour Together 💕</h3>
-      <p>Word is… Alex and Jamie were spotted laughing together at lunch!</p>
+      <div class="pair">
+        <div class="person">
+          <img src="person5.jpg" alt="Person 5">
+          <h3>Jordan</h3>
+          <p>Creative artist who loves painting sunsets.</p>
+        </div>
+        <div class="person">
+          <img src="person6.jpg" alt="Person 6">
+          <h3>Casey</h3>
+          <p>Bookworm with a passion for fantasy novels.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <footer>
-    <p>&copy; Exposing people's crushes daily</p>
+    <p>&copy; 2025 Crushes n Rumours | Fictional fun only</p>
   </footer>
 </body>
 </html>
