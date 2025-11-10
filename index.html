@@ -5,28 +5,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Password Gate</title>
   <style>
-    body { font-family: Arial, sans-serif; background-color: #ffe6f0; text-align: center; padding: 50px; }
-    .box { background: white; display: inline-block; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-    input { padding: 10px; margin: 10px; border-radius: 5px; border: 1px solid #ccc; }
-    button { background-color: #ff66b2; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
-    button:hover { background-color: #ff3385; }
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #ffe6f0;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background-color: #ff99cc;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .box {
+      background: white;
+      display: inline-block;
+      margin-top: 60px;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #ff3385;
+    }
+    input {
+      padding: 10px;
+      margin: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      width: 80%;
+    }
+    button {
+      background-color: #ff66b2;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #ff3385;
+    }
+    #message {
+      color: red;
+      margin-top: 10px;
+    }
+    footer {
+      background-color: #ff99cc;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
   </style>
 </head>
 <body>
+  <header>
+    <h1>💖 Crushes n Rumours 💖</h1>
+    <p>Enter the secret password to unlock the fun!</p>
+  </header>
+
   <div class="box">
-    <h2>💖 Enter Password to Continue 💖</h2>
+    <h2>🔑 Password Required</h2>
     <input type="password" id="password" placeholder="Enter password">
     <br>
     <button onclick="checkPassword()">Submit</button>
-    <p id="message" style="color:red;"></p>
+    <p id="message"></p>
   </div>
+
+  <footer>
+    <p>&copy; 2025 Crushes n Rumours | Fictional fun only!</p>
+  </footer>
 
   <script>
     function checkPassword() {
       const input = document.getElementById("password").value;
       const correct = "rumours2025"; // <-- set your password here
       if (input === correct) {
-        window.location.href = "home.html"; // send to homepage
+        window.location.href = "home.html"; // redirect to homepage
       } else {
         document.getElementById("message").textContent = "Incorrect password!";
       }
