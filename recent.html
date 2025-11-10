@@ -10,12 +10,47 @@
     nav { background-color: #ff66b2; display: flex; justify-content: center; padding: 10px; }
     nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
     nav a:hover { text-decoration: underline; }
-    .posts { display: flex; flex-direction: column; gap: 20px; padding: 20px; }
-    .card { background: white; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); padding: 15px; }
-    .pair { display: flex; justify-content: space-around; align-items: center; }
-    .person { text-align: center; width: 45%; }
-    .person img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; }
-    footer { background-color: #ff99cc; color: white; text-align: center; padding: 15px; margin-top: 20px; }
+   .posts { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 20px; 
+  padding: 20px; 
+}
+
+.card { 
+  background: white; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+  padding: 15px; 
+}
+
+.pair { 
+  display: flex; 
+  justify-content: space-around; 
+  align-items: center; 
+}
+
+.person { 
+  text-align: center; 
+  width: 45%; 
+}
+
+.person img { 
+  width: 100px; 
+  height: 100px; 
+  border-radius: 0;       /* square corners */
+  object-fit: cover;      /* keeps image nicely cropped */
+  border: 2px solid #ff99cc; /* optional: thin pink border */
+}
+
+footer { 
+  background-color: #ff99cc; 
+  color: white; 
+  text-align: center; 
+  padding: 15px; 
+  margin-top: 20px; 
+}
+
   </style>
 </head>
 <body>
