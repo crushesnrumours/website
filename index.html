@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Gate</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color: #ffe6f0; text-align: center; padding: 50px; }
+    .box { background: white; display: inline-block; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    input { padding: 10px; margin: 10px; border-radius: 5px; border: 1px solid #ccc; }
+    button { background-color: #ff66b2; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; }
+    button:hover { background-color: #ff3385; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>💖 Enter Password to Continue 💖</h2>
+    <input type="password" id="password" placeholder="Enter password">
+    <br>
+    <button onclick="checkPassword()">Submit</button>
+    <p id="message" style="color:red;"></p>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById("password").value;
+      const correct = "rumours2025"; // <-- set your password here
+      if (input === correct) {
+        window.location.href = "home.html"; // send to homepage
+      } else {
+        document.getElementById("message").textContent = "Incorrect password!";
+      }
+    }
+  </script>
+</body>
+</html>
